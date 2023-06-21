@@ -9,20 +9,20 @@ function playGame(playerSelection, computerSelection){
 
     playerSelection = playerSelection.toLowerCase();
 
-    if (computerSelection == playerSelection)
+    if (computerSelection === playerSelection)
     {
         console.log("TIE!");
     }
     else if (
-        (computerSelection == "rock" && playerSelection == "paper")
-        (computerSelection == "scissors" && playerSelection == "rock")
+        (computerSelection == "rock" && playerSelection == "paper")||
+        (computerSelection == "scissors" && playerSelection == "rock")||
         (computerSelection == "paper" && playerSelection == "scissors")
     ){
         console.log("You win! " + playerSelection + " beats " + computerSelection);
     }
     else if (
-        (computerSelection == "paper" && playerSelection == "rock")
-        (computerSelection == "rock" && playerSelection == "scissors")
+        (computerSelection == "paper" && playerSelection == "rock")||
+        (computerSelection == "rock" && playerSelection == "scissors")||
         (computerSelection == "scissors" && playerSelection == "paper")
     ){
         console.log("You lose... " + computerSelection +  " beats " + playerSelection);
